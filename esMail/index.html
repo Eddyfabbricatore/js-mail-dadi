@@ -9,21 +9,23 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
+
   <title>Mail</title>
 </head>
 <body>
+  <div class="container d-flex flex-column justify-content-center align-items-center">
+    <div class="data">
+      <label for="inputEmail" class="form-label">Inserire email utente</label>
+      <input type="email" id="inputEmail" class="form-control">
 
-  <div class="container">
-    <div class="row my-3">
-      <div id="col1" class="col-3">
-        <label for="InputEmail1" class="form-label">Inserire email utente</label>
-        <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp">
-
-        <button id="btn1" type="button" class="btn btn-primary my-3">Accedi</button>
-
-        <h2></h2>
+      <div class="text-center my-3">
+        <button type="button" id="btnLogin" class="btn btn-secondary">Accedi</button>
       </div>
     </div>
+
+    <h2></h2>
   </div>
   
   <script src="script.js"></script>

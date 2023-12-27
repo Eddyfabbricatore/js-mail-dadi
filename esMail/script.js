@@ -4,30 +4,28 @@ const emailList = [
   'booleanuser@gmail.com'
 ];
 
-const emailInserita = document.getElementById('InputEmail1').value;
+let email;
 
-const btn = document.getElementById('btn1');
+const btn = document.getElementById('btnLogin');
 
-const accesso = document.querySelector('h2');
+const message = document.querySelector('h2');
 
 btn.addEventListener('click', function(){
-  // console.log(emailInserita);
+  reset();
+
+  email = document.getElementById('inputEmail').value;
 
   for(let i = 0; i < emailList.length; i++){
-    if(emailInserita === emailList[i]){
-      // console.log(emailInserita);
-      // console.log(emailList);
-      console.log('presente');
-
-      accesso.innerHTML = 'Accesso consentito';
+    if(email === emailList[i]){
+      message.innerHTML = 'Accesso consentito';
 
       break;
     }else{
-      // console.log(emailInserita);
-      // console.log(emailList);
-      console.log('Non presente');
-
-      accesso.innerHTML = 'Accesso non consentito';
+      message.innerHTML = 'Accesso non consentito';
     }
   }
-});
+})
+
+function reset(){
+  email = '';
+}

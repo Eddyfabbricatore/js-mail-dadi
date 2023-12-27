@@ -1,0 +1,15 @@
+:root{
+  --bg-body: #ffebcd
+}
+
+body{
+  background-color: var(--bg-body);
+}
+
+.container{
+  height: 100vh;
+}
+
+.data{
+  width: 600px;
+}

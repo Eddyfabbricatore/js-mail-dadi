@@ -1,15 +1,25 @@
-const message = document.querySelector('h2');
+const message = document.querySelector('h3');
+const btn = document.getElementById('btnPlay');
 
-const numComputer = Math.floor(Math.random() * 6) + 1;
-const numUtente = Math.floor(Math.random() * 6) + 1;
+let numComputer;
+let numUtente;
 
-// console.log(numComputer);
-// console.log(numUtente);
+btn.addEventListener('click', function(){
+  reset();
 
-if(numComputer < numUtente){
-  message.innerHTML = 'Il vincitore è l\'utente';
-}else if(numComputer === numUtente){
-  message.innerHTML = 'I due numeri sono uguali, nessun vincitore';
-}else{
-  message.innerHTML = 'Il vincitore è il computer';
+  numComputer = Math.floor(Math.random() * 6) + 1;
+  numUtente = Math.floor(Math.random() * 6) + 1;
+
+  if(numComputer < numUtente){
+    message.innerHTML = `Il numero generato dall'utente è ${numUtente}, quello generato dal computer è ${numComputer}. Il vincitore è l'utente`;
+  }else if(numComputer === numUtente){
+    message.innerHTML = `Il numero generato dall'utente è ${numUtente}, quello generato dal computer è ${numComputer}. Nessun vincitore`;
+  }else{
+    message.innerHTML = `Il numero generato dall'utente è ${numUtente}, quello generato dal computer è ${numComputer}. Il vincitore è il computer`;
+  }
+})
+
+function reset(){
+  numComputer = '';
+  numUtente = '';
 }
